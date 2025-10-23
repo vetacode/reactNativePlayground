@@ -50,7 +50,10 @@ return (
 
 <View style={menuStyles.container}> 
      <Text style={menuStyles.headerText}>Menu Items</Text>
-    <FlatList data={menuItemsToDisplay} keyExtractor={(item)=> item.id} renderItem={renderItem}>
+    <FlatList 
+    data={menuItemsToDisplay} 
+    keyExtractor={(a)=> a.id} 
+    renderItem={renderItem}>
     </FlatList>
 </View>
 

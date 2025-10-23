@@ -1,5 +1,4 @@
-import React from 'react';
-import {View, Text, StyleSheet, FlatList} from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 
 const green = '#495E57';
 const yellow = '#F4CE14';
@@ -31,63 +30,53 @@ const menuItemsToDisplay = [
   { name: 'Panna Cotta', price: '$5.00', id: '21V' },
 ];
 
+const Item = ({ name, price }) => (
+  <View style={menuStyles.innerContainer}>
+    <Text style={menuStyles.itemText}>{name}</Text>
+    <Text style={menuStyles.itemText}>{price}</Text>
+  </View>
+);
 
-const Item = ({name, price}) => (
+export default function MenuItems() {
+  const renderItem = ({ item }) => <Item name={item.name} price={item.price} />;
 
-    <View style={menuStyles.innerContainer}>
-        <Text style={menuStyles.itemText}>{name}</Text>
-        <Text style={menuStyles.itemText}>{price}</Text>
-
+  return (
+    <View style={menuStyles.container}>
+      <Text style={menuStyles.headerText}>Menu Items</Text>
+      <FlatList
+        data={menuItemsToDisplay}
+        keyExtractor={(a) => a.id}
+        renderItem={renderItem}
+      ></FlatList>
     </View>
-
-)
-
-export default function MenuItems () {
-const renderItem = ({item}) =>
-<Item name={item.name} price={item.price}/>
-
-return (
-
-<View style={menuStyles.container}> 
-     <Text style={menuStyles.headerText}>Menu Items</Text>
-    <FlatList 
-    data={menuItemsToDisplay} 
-    keyExtractor={(a)=> a.id} 
-    renderItem={renderItem}>
-    </FlatList>
-</View>
-
-)
+  );
 }
 
-
-
 const menuStyles = StyleSheet.create({
-    container: {
-        flex: 1,
-        // backgroundColor: green,
-    },
+  container: {
+    flex: 1,
+    // backgroundColor: green,
+  },
 
-    innerContainer: {
-        // backgroundColor: salmon,
-        padding: 20,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-    },
+  innerContainer: {
+    // backgroundColor: salmon,
+    padding: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
 
-    headerText: {
-        fontSize: 30,
-        color: white,
-        textAlign: 'center',
-        // marginTop: 10,
-        padding: 10,
-        backgroundColor: green,
-    },
+  headerText: {
+    fontSize: 30,
+    color: white,
+    textAlign: 'center',
+    // marginTop: 10,
+    padding: 10,
+    backgroundColor: green,
+  },
 
-    itemText: {
-        fontSize: 20,
-        flexWrap: 'wrap',
-        color: yellow,
-        
-    }
-}) 
+  itemText: {
+    fontSize: 20,
+    flexWrap: 'wrap',
+    color: yellow,
+  },
+});

@@ -1,8 +1,7 @@
-import * as React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-import LittleLemonHeader from './components/LittleLemonHeader';
 import LittleLemonFooter from './components/LittleLemonFooter';
+import LittleLemonHeader from './components/LittleLemonHeader';
 // import WelcomeScreen from './WelcomeScreen';
 import MenuItems from './components/MenuItems';
 
@@ -28,4 +27,3 @@ const styles = StyleSheet.create({
   },
   footerContainer: { backgroundColor: '#333333' },
 });
-

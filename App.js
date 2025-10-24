@@ -4,7 +4,6 @@ import LittleLemonFooter from './components/LittleLemonFooter';
 import LittleLemonHeader from './components/LittleLemonHeader';
 import { black, green } from './components/MenuItems';
 import MenuItemsSectionList from './components/MenuItemsSectionList';
-
 // import WelcomeScreen from './WelcomeScreen';
 
 export default function App() {

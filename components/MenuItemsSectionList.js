@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { SectionList, StyleSheet, Text, View } from 'react-native';
 import { black, green, salmon, white, yellow } from './MenuItems';
 
 const menuItemsToDisplay = [
@@ -43,16 +43,19 @@ const Item = ({ name, price }) => (
 );
 
 export default function MenuItemsSectionList() {
-  const renderItem = ({ item }) => <Item name={item.name} price={item.price} />;
-
+  const renderItem = ({ item }) => <Item name={item} />;
+  const renderSectionHeader = ({ section: { title } }) => (
+    <Text style={menuStyles.sectionHeader}>{title}</Text>
+  );
   return (
     <View style={menuStyles.container}>
       <Text style={menuStyles.headerText}>Menu Items</Text>
-      <FlatList
-        data={menuItemsToDisplay}
-        keyExtractor={(a) => a.id}
+      <SectionList
+        sections={menuItemsToDisplay}
         renderItem={renderItem}
-      ></FlatList>
+        keyExtractor={(item, index) => item + index}
+        renderSectionHeader={renderSectionHeader}
+      ></SectionList>
     </View>
   );
 }
@@ -60,29 +63,38 @@ export default function MenuItemsSectionList() {
 const menuStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: green,
   },
-
   innerContainer: {
-    // backgroundColor: salmon,
-    padding: 20,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    paddingHorizontal: 40,
+    paddingVertical: 20,
+    backgroundColor: black,
   },
 
   headerText: {
-    fontSize: 30,
-    color: black,
-    textAlign: 'center',
-    // marginTop: 10,
-    padding: 10,
-    backgroundColor: salmon,
+    fontSize: 36,
+    color: white,
+    padding: 5,
   },
-
+  sectionHeader: {
+    backgroundColor: '#fbdabb',
+    color: '#333333',
+    fontSize: 34,
+    flexWrap: 'wrap',
+    textAlign: 'center',
+  },
   itemText: {
+    color: '#F4CE14',
+    fontSize: 32,
+  },
+  separator: {
+    borderBottomWidth: 1,
+    borderColor: '#EDEFEE',
+  },
+  footerText: {
+    color: '#EDEFEE',
     fontSize: 20,
     flexWrap: 'wrap',
-    color: yellow,
+    textAlign: 'center',
   },
 });
 

@@ -35,10 +35,9 @@ const menuItemsToDisplay = [
   },
 ];
 
-const Item = ({ name, price }) => (
+const Item = ({ name }) => (
   <View style={menuStyles.innerContainer}>
     <Text style={menuStyles.itemText}>{name}</Text>
-    <Text style={menuStyles.itemText}>{price}</Text>
   </View>
 );
 

@@ -55,7 +55,7 @@ export default function MenuItems() {
 const menuStyles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: green,
+    backgroundColor: black,
   },
 
   innerContainer: {
@@ -67,11 +67,11 @@ const menuStyles = StyleSheet.create({
 
   headerText: {
     fontSize: 30,
-    color: white,
+    color: black,
     textAlign: 'center',
     // marginTop: 10,
     padding: 10,
-    backgroundColor: green,
+    backgroundColor: salmon,
   },
 
   itemText: {
@@ -80,3 +80,5 @@ const menuStyles = StyleSheet.create({
     color: yellow,
   },
 });
+
+export { black, green, salmon, white, yellow };

@@ -2,15 +2,15 @@ import { StyleSheet, View } from 'react-native';
 
 import LittleLemonFooter from './components/LittleLemonFooter';
 import LittleLemonHeader from './components/LittleLemonHeader';
-// import WelcomeScreen from './WelcomeScreen';
-import MenuItems from './components/MenuItems';
+import MenuItems, { green } from './components/MenuItems';
+import WelcomeScreen from './WelcomeScreen';
 
 export default function App() {
   return (
     <>
       <View style={styles.container}>
         <LittleLemonHeader />
-        {/* <WelcomeScreen /> */}
+        <WelcomeScreen />
         <MenuItems />
       </View>
       <View style={styles.footerContainer}>
@@ -23,7 +23,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#333333',
+    backgroundColor: green,
   },
-  footerContainer: { backgroundColor: '#333333' },
+  footerContainer: { backgroundColor: green },
 });

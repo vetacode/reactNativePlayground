@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { yellow } from './MenuItems';
 
 export default function LittleLemonHeader() {
   return (
@@ -11,7 +11,7 @@ export default function LittleLemonHeader() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#EE9972',
+    backgroundColor: yellow,
   },
   headerText: {
     marginTop: 50,

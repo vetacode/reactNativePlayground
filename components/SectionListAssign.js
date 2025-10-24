@@ -79,7 +79,7 @@ const menuStyles = StyleSheet.create({
   },
   innerContainer: {
     paddingHorizontal: 40,
-    paddingVertical: 20,
+    paddingVertical: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -92,13 +92,14 @@ const menuStyles = StyleSheet.create({
   },
 
   itemText: {
-    color: white,
+    color: yellow,
     fontSize: 20,
   },
 
   separator: {
-    borderColor: yellow,
+    // borderColor: yellow,
     borderBottomWidth: 1,
+    borderBottomColor: white,
   },
 });
 

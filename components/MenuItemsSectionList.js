@@ -1,10 +1,5 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native';
-
-const green = '#495E57';
-const yellow = '#F4CE14';
-const salmon = '#EE9972';
-const black = '#333333';
-const white = '#EDEFEE';
+import { black, green, salmon, white, yellow } from './MenuItems';
 
 const menuItemsToDisplay = [
   {

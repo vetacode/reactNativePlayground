@@ -41,6 +41,14 @@ const Item = ({ name }) => (
   </View>
 );
 
+const Separator = () => <View style={menuStyles.separator} />;
+
+const Footer = () => (
+  <Text style={menuStyles.footerText}>
+    All Rights Reserved by Little Lemon 2022
+  </Text>
+);
+
 export default function MenuItemsSectionList() {
   const renderItem = ({ item }) => <Item name={item} />;
   const renderSectionHeader = ({ section: { title } }) => (
@@ -54,6 +62,8 @@ export default function MenuItemsSectionList() {
         renderItem={renderItem}
         keyExtractor={(item, index) => item + index}
         renderSectionHeader={renderSectionHeader}
+        ItemSeparatorComponent={Separator}
+        // ListFooterComponent={Footer}
       ></SectionList>
     </View>
   );

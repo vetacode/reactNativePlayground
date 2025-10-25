@@ -63,6 +63,7 @@ const MenuItems = () => {
         keyExtractor={(item, index) => item + index}
         renderItem={renderItem}
         renderSectionHeader={renderSectionHeader}
+        ItemSeparatorComponent={separator}
       ></SectionList>
     </View>
   );

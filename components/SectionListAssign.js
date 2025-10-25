@@ -45,14 +45,14 @@ const menuItemsToDisplay = [
   },
 ];
 
+const separator = () => <View style={menuStyles.separator} />;
+
 const Item = ({ name, price }) => (
   <View style={menuStyles.innerContainer}>
     <Text style={menuStyles.itemText}>{name}</Text>
     <Text style={menuStyles.itemText}>{price}</Text>
   </View>
 );
-
-const separator = () => <View style={menuStyles.separator} />;
 
 const MenuItems = () => {
   const renderItem = ({ item }) => <Item name={item.name} price={item.price} />;

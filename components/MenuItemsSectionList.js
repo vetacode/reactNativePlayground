@@ -5,39 +5,53 @@ const menuItemsToDisplay = [
   {
     title: 'Appetizers',
     data: [
-      'Hummus',
-      'Moutabal',
-      'Falafel',
-      'Marinated Olives',
-      'Kofta',
-      'Eggplant Salad',
+      { name: 'Tahu Isi', price: 'Rp 10.000' },
+      { name: 'Tempe Mendoan', price: 'Rp 12.000' },
+      { name: 'Pisang Goreng', price: 'Rp 8.000' },
+      { name: 'Bakwan Jagung', price: 'Rp 10.000' },
+      { name: 'Martabak Mini', price: 'Rp 15.000' },
+      { name: 'Sate Telur Puyuh', price: 'Rp 12.000' },
     ],
   },
   {
     title: 'Main Dishes',
-    data: ['Lentil Burger', 'Smoked Salmon', 'Kofta Burger', 'Turkish Kebab'],
+    data: [
+      { name: 'Nasi Goreng Spesial', price: 'Rp 25.000' },
+      { name: 'Mie Goreng Jawa', price: 'Rp 22.000' },
+      { name: 'Sate Ayam Madura', price: 'Rp 30.000' },
+      { name: 'Rendang Padang', price: 'Rp 40.000' },
+      { name: 'Ayam Penyet', price: 'Rp 28.000' },
+      { name: 'Soto Betawi', price: 'Rp 32.000' },
+    ],
   },
   {
     title: 'Sides',
     data: [
-      'Fries',
-      'Buttered Rice',
-      'Bread Sticks',
-      'Pita Pocket',
-      'Lentil Soup',
-      'Greek Salad',
-      'Rice Pilaf',
+      { name: 'Kerupuk Udang', price: 'Rp 5.000' },
+      { name: 'Sambal Terasi', price: 'Rp 5.000' },
+      { name: 'Telur Dadar', price: 'Rp 7.000' },
+      { name: 'Tahu Tempe Goreng', price: 'Rp 10.000' },
+      { name: 'Sayur Asem', price: 'Rp 8.000' },
+      { name: 'Perkedel Kentang', price: 'Rp 6.000' },
     ],
   },
   {
     title: 'Desserts',
-    data: ['Baklava', 'Tartufo', 'Tiramisu', 'Panna Cotta'],
+    data: [
+      { name: 'Es Cendol', price: 'Rp 12.000' },
+      { name: 'Es Teler', price: 'Rp 15.000' },
+      { name: 'Klepon', price: 'Rp 8.000' },
+      { name: 'Pisang Bakar Cokelat Keju', price: 'Rp 18.000' },
+      { name: 'Dadar Gulung', price: 'Rp 10.000' },
+      { name: 'Kolak Pisang', price: 'Rp 12.000' },
+    ],
   },
 ];
 
-const Item = ({ name }) => (
+const Item = ({ name, price }) => (
   <View style={menuStyles.innerContainer}>
     <Text style={menuStyles.itemText}>{name}</Text>
+    <Text style={menuStyles.itemText}>{price}</Text>
   </View>
 );
 
@@ -50,7 +64,7 @@ const Footer = () => (
 );
 
 export default function MenuItemsSectionList() {
-  const renderItem = ({ item }) => <Item name={item} />;
+  const renderItem = ({ item }) => <Item name={item.name} price={item.price} />;
   const renderSectionHeader = ({ section: { title } }) => (
     <Text style={menuStyles.sectionHeader}>{title}</Text>
   );
@@ -74,26 +88,31 @@ const menuStyles = StyleSheet.create({
     flex: 1,
   },
   innerContainer: {
-    paddingHorizontal: 40,
-    paddingVertical: 20,
+    paddingHorizontal: 20,
+    paddingVertical: 15,
     backgroundColor: black,
+    justifyContent: 'space-between',
+    flexDirection: 'row',
   },
 
   headerText: {
     fontSize: 36,
     color: white,
-    padding: 5,
+    paddingVertical: 5,
+    paddingHorizontal: 20,
   },
+
   sectionHeader: {
     backgroundColor: '#fbdabb',
     color: '#333333',
-    fontSize: 34,
+    fontSize: 25,
     flexWrap: 'wrap',
     textAlign: 'center',
+    paddingVertical: 5,
   },
   itemText: {
     color: '#F4CE14',
-    fontSize: 32,
+    fontSize: 20,
   },
   separator: {
     borderBottomWidth: 1,

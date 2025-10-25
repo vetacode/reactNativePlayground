@@ -1,5 +1,5 @@
 import { SectionList, StyleSheet, Text, View } from 'react-native';
-import { black, green, salmon, white, yellow } from './MenuItems';
+import { black, white } from './MenuItems';
 
 const menuItemsToDisplay = [
   {
@@ -106,5 +106,3 @@ const menuStyles = StyleSheet.create({
     textAlign: 'center',
   },
 });
-
-export { black, green, salmon, white, yellow };

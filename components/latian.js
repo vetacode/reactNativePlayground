@@ -1,5 +1,5 @@
 import { SectionList, StyleSheet, Text, View } from 'react-native';
-import { black, green, salmon, white } from './MenuItems';
+import { black, green, salmon, white, yellow } from './MenuItems';
 
 const menuItemsToDisplay = [
   {

@@ -1,45 +1,48 @@
 import { SectionList, StyleSheet, Text, View } from 'react-native';
-
+import { black, green, salmon, white } from './MenuItems';
 const menuItemsToDisplay = [
   {
     title: 'Appetizers',
     data: [
-      { name: 'Hummus', price: '$5.00' },
-      { name: 'Moutabal', price: '$5.00' },
-      { name: 'Falafel', price: '$7.50' },
-      { name: 'Marinated Olives', price: '$5.00' },
-      { name: 'Kofta', price: '$5.00' },
-      { name: 'Eggplant Salad', price: '$8.50' },
+      { name: 'Tahu Isi', price: 'Rp 10.000' },
+      { name: 'Tempe Mendoan', price: 'Rp 12.000' },
+      { name: 'Pisang Goreng', price: 'Rp 8.000' },
+      { name: 'Bakwan Jagung', price: 'Rp 10.000' },
+      { name: 'Martabak Mini', price: 'Rp 15.000' },
+      { name: 'Sate Telur Puyuh', price: 'Rp 12.000' },
     ],
   },
   {
     title: 'Main Dishes',
     data: [
-      { name: 'Lentil Burger', price: '$10.00' },
-      { name: 'Smoked Salmon', price: '$14.00' },
-      { name: 'Kofta Burger', price: '$11.00' },
-      { name: 'Turkish Kebab', price: '$15.50' },
+      { name: 'Nasi Goreng Spesial', price: 'Rp 25.000' },
+      { name: 'Mie Goreng Jawa', price: 'Rp 22.000' },
+      { name: 'Sate Ayam Madura', price: 'Rp 30.000' },
+      { name: 'Rendang Padang', price: 'Rp 40.000' },
+      { name: 'Ayam Penyet', price: 'Rp 28.000' },
+      { name: 'Soto Betawi', price: 'Rp 32.000' },
     ],
   },
   {
     title: 'Sides',
     data: [
-      { name: 'Fries', price: '$3.00', id: '11K' },
-      { name: 'Buttered Rice', price: '$3.00' },
-      { name: 'Bread Sticks', price: '$3.00' },
-      { name: 'Pita Pocket', price: '$3.00' },
-      { name: 'Lentil Soup', price: '$3.75' },
-      { name: 'Greek Salad', price: '$6.00' },
-      { name: 'Rice Pilaf', price: '$4.00' },
+      { name: 'Kerupuk Udang', price: 'Rp 5.000' },
+      { name: 'Sambal Terasi', price: 'Rp 5.000' },
+      { name: 'Telur Dadar', price: 'Rp 7.000' },
+      { name: 'Tahu Tempe Goreng', price: 'Rp 10.000' },
+      { name: 'Sayur Asem', price: 'Rp 8.000' },
+      { name: 'Perkedel Kentang', price: 'Rp 6.000' },
     ],
   },
   {
     title: 'Desserts',
     data: [
-      { name: 'Baklava', price: '$3.00' },
-      { name: 'Tartufo', price: '$3.00' },
-      { name: 'Tiramisu', price: '$5.00' },
-      { name: 'Panna Cotta', price: '$5.00' },
+      { name: 'Es Cendol', price: 'Rp 12.000' },
+      { name: 'Es Teler', price: 'Rp 15.000' },
+      { name: 'Klepon', price: 'Rp 8.000' },
+      { name: 'Pisang Bakar Cokelat Keju', price: 'Rp 18.000' },
+      { name: 'Dadar Gulung', price: 'Rp 10.000' },
+      { name: 'Kolak Pisang', price: 'Rp 12.000' },
     ],
   },
 ];
@@ -71,7 +74,16 @@ const MenuItems = () => {
 
 const menuStyles = StyleSheet.create({
   container: { flex: 1 },
-  innerContainer: {},
+  innerContainer: {
+    backgroundColor: green,
+    // padding: 10
+  },
+  sectinoHeader: { backgroundColor: salmon, color: black, fontSize: 35 },
+  itemText: { fontSize: 25, color: yellow, padding: 10 },
+  separator: {
+    borderBottomWidth: 1,
+    borderBottomColor: white,
+  },
 });
 
 export default MenuItems;

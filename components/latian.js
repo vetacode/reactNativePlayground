@@ -48,20 +48,22 @@ const menuItemsToDisplay = [
   },
 ];
 
-const separator = () => <View style={menuStyles.separator}></View>;
+const separator = () => <View style={menuStyles.separator} />;
 
 const Item = ({ name, price }) => (
-  <View>
-    <Text>{name}</Text>
-    <Text>{price}</Text>
+  <View style={menuStyles.innerContainer}>
+    <Text style={menuStyles.itemText}>{name}</Text>
+    <Text style={menuStyles.itemText}>{price}</Text>
   </View>
 );
 
 const MenuLists = () => {
   const renderItem = ({ item }) => <Item name={item.name} price={item.price} />;
-  const renderSectionHeader = ({ section: { title } }) => <Text>{title}</Text>;
+  const renderSectionHeader = ({ section: { title } }) => (
+    <Text style={menuStyles.sectinoHeader}>{title}</Text>
+  );
   return (
-    <View>
+    <View style={menuStyles.container}>
       <SectionList
         section={menuItemsToDisplay}
         keyExtractor={(item, index) => item + index}
@@ -77,10 +79,17 @@ const menuStyles = StyleSheet.create({
   container: { flex: 1 },
   innerContainer: {
     backgroundColor: green,
-    // padding: 10
+    // padding: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
-  sectinoHeader: { backgroundColor: salmon, color: black, fontSize: 35 },
-  itemText: { fontSize: 25, color: yellow, padding: 10 },
+  sectinoHeader: {
+    textAlign: 'center',
+    backgroundColor: salmon,
+    color: black,
+    fontSize: 25,
+  },
+  itemText: { fontSize: 20, color: yellow, padding: 10 },
   separator: {
     borderBottomWidth: 1,
     borderBottomColor: white,

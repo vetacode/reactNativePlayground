@@ -5,6 +5,9 @@ import LittleLemonHeader from './components/LittleLemonHeader';
 import { black, green } from './components/MenuItems';
 // import WelcomeScreen from './WelcomeScreen';
 import MenuLists from './components/Latian';
+// import MenuItems from './components/MenuItems';
+// import MenuItems from './components/MenuItemsSectionList';
+// import MenuItems from './components/SectionListAssign';
 
 export default function App() {
   return (
@@ -14,6 +17,7 @@ export default function App() {
         {/* <WelcomeScreen /> */}
         {/* <MenuItemsSectionList /> */}
         <MenuLists />
+        {/* <MenuItems /> */}
       </View>
       <View style={styles.footerContainer}>
         <LittleLemonFooter />

@@ -1,5 +1,6 @@
 import { SectionList, StyleSheet, Text, View } from 'react-native';
 import { black, green, salmon, white } from './MenuItems';
+
 const menuItemsToDisplay = [
   {
     title: 'Appetizers',
@@ -56,7 +57,7 @@ const Item = ({ name, price }) => (
   </View>
 );
 
-const MenuItems = () => {
+const MenuLists = () => {
   const renderItem = ({ item }) => <Item name={item.name} price={item.price} />;
   const renderSectionHeader = ({ section: { title } }) => <Text>{title}</Text>;
   return (
@@ -86,4 +87,4 @@ const menuStyles = StyleSheet.create({
   },
 });
 
-export default MenuItems;
+export default MenuLists;

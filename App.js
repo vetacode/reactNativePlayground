@@ -4,8 +4,7 @@ import LittleLemonFooter from './components/LittleLemonFooter';
 import LittleLemonHeader from './components/LittleLemonHeader';
 import { black, green } from './components/MenuItems';
 // import WelcomeScreen from './WelcomeScreen';
-// import MenuItems from './components/MenuItems';
-import MenuItemsSectionList from './components/MenuItemsSectionList';
+// import MenuItemsSectionList from './components/MenuItemsSectionList';
 // import SectionListAssignAnswer from './components/SectionListAssignAnswer';
 // import MenuItems from './components/SectionListAssign';
 // import SectionListAssign from './components/SectionListAssign';
@@ -16,8 +15,9 @@ export default function App() {
       <View style={styles.container}>
         <LittleLemonHeader />
         {/* <WelcomeScreen /> */}
+        {/* <MenuItems /> */}
         {/* <SectionListAssign /> */}
-        <MenuItemsSectionList />
+        {/* <MenuItemsSectionList /> */}
         {/* <SectionListAssignAnswer /> */}
         {/* <MenuLists /> */}
       </View>

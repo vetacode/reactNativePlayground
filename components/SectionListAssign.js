@@ -54,7 +54,7 @@ const Item = ({ name, price }) => (
   </View>
 );
 
-const MenuItems = () => {
+const SectionListAssign = () => {
   const renderItem = ({ item }) => <Item name={item.name} price={item.price} />;
   const renderSectionHeader = ({ section: { title } }) => (
     <Text style={menuStyles.sectionHeader}>{title}</Text>
@@ -103,4 +103,4 @@ const menuStyles = StyleSheet.create({
   },
 });
 
-export default MenuItems;
+export default SectionListAssign;

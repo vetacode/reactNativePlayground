@@ -88,12 +88,13 @@ const menuStyles = StyleSheet.create({
 
   headerStyle: {
     backgroundColor: salmon,
-    padding: 20,
+    padding: 5,
   },
 
   sectionHeader: {
     textAlign: 'center',
     color: black,
+    flexWrap: 'wrap',
     fontSize: 25,
   },
   itemText: { fontSize: 20, color: yellow, padding: 10 },

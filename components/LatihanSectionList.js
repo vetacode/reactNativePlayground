@@ -88,6 +88,7 @@ const menuStyles = StyleSheet.create({
     backgroundColor: salmon,
     color: black,
     fontSize: 25,
+    padding: 20,
   },
   itemText: { fontSize: 20, color: yellow, padding: 10 },
   separator: {

@@ -86,14 +86,15 @@ const menuStyles = StyleSheet.create({
     color: '#F4CE14',
     fontSize: 20,
   },
-  headerStyle: {
-    backgroundColor: '#F4CE14',
-  },
+  // headerStyle: {
+  //   backgroundColor: '#F4CE14',
+  // },
   sectionHeader: {
     color: 'black',
     fontSize: 26,
     flexWrap: 'wrap',
     textAlign: 'center',
+    backgroundColor: '#F4CE14',
   },
 });
 

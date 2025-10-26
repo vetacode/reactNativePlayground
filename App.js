@@ -6,7 +6,7 @@ import { black, green } from './components/MenuItems';
 // import WelcomeScreen from './WelcomeScreen';
 // import MenuItemsSectionList from './components/MenuItemsSectionList';
 // import SectionListAssign from './components/SectionListAssign';ß
-// import SectionListAssignAnswer from './components/SectionListAssignAnswer';
+import SectionListAssignAnswer from './components/SectionListAssignAnswer';
 // import MenuItems from './components/SectionListAssign';
 import LatihanSectionList from './components/LatihanSectionList';
 
@@ -18,7 +18,7 @@ export default function App() {
         {/* <WelcomeScreen /> */}
         {/* <MenuItems /> */}
         {/* <SectionListAssign /> */}
-        {/* <SectionListAssignAnswer /> */}
+        <SectionListAssignAnswer />
         {/* <MenuItemsSectionList /> */}
         <LatihanSectionList />
       </View>

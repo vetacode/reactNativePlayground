@@ -60,7 +60,7 @@ const Item = ({ name, price }) => (
 const LatihanSectionList = () => {
   const renderItem = ({ item }) => <Item name={item.name} price={item.price} />;
   const renderSectionHeader = ({ section: { title } }) => (
-    <Text style={menuStyles.sectinoHeader}>{title}</Text>
+    <Text style={menuStyles.sectionHeader}>{title}</Text>
   );
   return (
     <View style={menuStyles.container}>
@@ -83,7 +83,7 @@ const menuStyles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  sectinoHeader: {
+  sectionHeader: {
     textAlign: 'center',
     backgroundColor: salmon,
     color: black,

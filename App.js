@@ -2,12 +2,13 @@ import { StyleSheet, View } from 'react-native';
 
 import LittleLemonFooter from './components/LittleLemonFooter';
 import LittleLemonHeader from './components/LittleLemonHeader';
-import { black, green } from './components/MenuItems';
+import MenuItems, { black, green } from './components/MenuItems';
 // import WelcomeScreen from './WelcomeScreen';
 // import MenuItemsSectionList from './components/MenuItemsSectionList';
 // import SectionListAssign from './components/SectionListAssign';ß
-import SectionListAssignAnswer from './components/SectionListAssignAnswer';
+// import SectionListAssignAnswer from './components/SectionListAssignAnswer';
 // import MenuItems from './components/SectionListAssign';
+// import MenuLists from './components/MenuLists';
 
 export default function App() {
   return (
@@ -15,9 +16,9 @@ export default function App() {
       <View style={styles.container}>
         <LittleLemonHeader />
         {/* <WelcomeScreen /> */}
-        {/* <MenuItems /> */}
+        <MenuItems />
         {/* <SectionListAssign /> */}
-        <SectionListAssignAnswer />
+        {/* <SectionListAssignAnswer /> */}
         {/* <MenuItemsSectionList /> */}
         {/* <MenuLists /> */}
       </View>

@@ -60,7 +60,9 @@ const Item = ({ name, price }) => (
 const LatihanSectionList = () => {
   const renderItem = ({ item }) => <Item name={item.name} price={item.price} />;
   const renderSectionHeader = ({ section: { title } }) => (
-    <Text style={menuStyles.sectionHeader}>{title}</Text>
+    <View style={menuStyles.headerStyle}>
+      <Text style={menuStyles.sectionHeader}>{title}</Text>
+    </View>
   );
   return (
     <View style={menuStyles.container}>
@@ -83,12 +85,16 @@ const menuStyles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+
+  headerStyle: {
+    backgroundColor: salmon,
+    padding: 20,
+  },
+
   sectionHeader: {
     textAlign: 'center',
-    backgroundColor: salmon,
     color: black,
     fontSize: 25,
-    padding: 20,
   },
   itemText: { fontSize: 20, color: yellow, padding: 10 },
   separator: {

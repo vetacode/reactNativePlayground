@@ -57,7 +57,7 @@ const Item = ({ name, price }) => (
   </View>
 );
 
-const MenuLists = () => {
+const LatihanSectionList = () => {
   const renderItem = ({ item }) => <Item name={item.name} price={item.price} />;
   const renderSectionHeader = ({ section: { title } }) => (
     <Text style={menuStyles.sectinoHeader}>{title}</Text>
@@ -79,7 +79,7 @@ const menuStyles = StyleSheet.create({
   container: { flex: 1 },
   innerContainer: {
     backgroundColor: green,
-    // padding: 10,
+    padding: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -96,4 +96,4 @@ const menuStyles = StyleSheet.create({
   },
 });
 
-export default MenuLists;
+export default LatihanSectionList;

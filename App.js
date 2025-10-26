@@ -8,7 +8,7 @@ import { black, green } from './components/MenuItems';
 // import SectionListAssign from './components/SectionListAssign';ß
 // import SectionListAssignAnswer from './components/SectionListAssignAnswer';
 // import MenuItems from './components/SectionListAssign';
-import MenuLists from './components/MenuLists';
+import LatihanSectionList from './components/LatihanSectionList';
 
 export default function App() {
   return (
@@ -20,7 +20,7 @@ export default function App() {
         {/* <SectionListAssign /> */}
         {/* <SectionListAssignAnswer /> */}
         {/* <MenuItemsSectionList /> */}
-        <MenuLists />
+        <LatihanSectionList />
       </View>
       <View style={styles.footerContainer}>
         <LittleLemonFooter />

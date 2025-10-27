@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import LittleLemonFooter from './components/LittleLemonFooter';
 import LittleLemonHeader from './components/LittleLemonHeader';
 import { black, green } from './components/MenuItems';
-import WelcomeScreen from './WelcomeScreen';
+import WelcomeScreen from './components/WelcomeScreen';
 // import MenuItemsSectionList from './components/MenuItemsSectionList';
 // import SectionListAssign from './components/SectionListAssign';ß
 // import SectionListAssignAnswer from './components/SectionListAssignAnswer';

@@ -4,7 +4,7 @@ import { ScrollView, StyleSheet, Text, TextInput } from 'react-native';
 export default function WelcomeScreen() {
   const [firstName, onChangeFirstName] = useState('');
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container} keyboardDismissMode='on-drag'>
       <Text style={styles.headerText}>Welcome to Little Lemon</Text>
       <Text style={styles.regularText}>
         Little Lemon is a charming neighborhood bistro that serves simple food

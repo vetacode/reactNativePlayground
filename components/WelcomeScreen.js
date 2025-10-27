@@ -16,6 +16,7 @@ export default function WelcomeScreen() {
     <KeyboardAvoidingView
       style={styles.container}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      keyboardVerticalOffset={Platform.OS === 'ios' ? 10 : 0}
     >
       <ScrollView
         contentContainerStyle={{ flexGrow: 1 }}
@@ -53,7 +54,7 @@ export default function WelcomeScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
+    flex: 1,
   },
   headerText: {
     padding: 40,

@@ -38,6 +38,7 @@ export default function WelcomeScreen() {
         />
         <TextInput
           style={styles.inputBoxMessage}
+          multiline={true}
           value={message}
           onChangeText={onChangeMessage}
           placeholder={'Input Your Message'}
@@ -79,7 +80,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     fontSize: 16,
-    borderColor: 'EDEFEE',
+    borderColor: 'black',
     backgroundColor: '#EDEFEE',
+    textAlign: 'left',
+    textAlignVertical: 'top',
   },
 });

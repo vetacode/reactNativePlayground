@@ -15,9 +15,12 @@ export default function WelcomeScreen() {
   return (
     <KeyboardAvoidingView
       style={styles.container}
-      behaviour={Platform.OS === 'ios' ? 'padding' : 'height'}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
-      <ScrollView keyboardDismissMode='on-drag'>
+      <ScrollView
+        contentContainerStyle={{ flexGrow: 1 }}
+        keyboardDismissMode='on-drag'
+      >
         <Text style={styles.headerText}>Welcome to Little Lemon</Text>
         <Text style={styles.regularText}>
           Little Lemon is a charming neighborhood bistro that serves simple food
@@ -50,7 +53,7 @@ export default function WelcomeScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
   },
   headerText: {
     padding: 40,

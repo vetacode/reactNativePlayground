@@ -21,6 +21,11 @@ export default function WelcomeScreen() {
   );
 }
 
+// const KeyBoardAvoidingView = ({behaviour, style}) => {
+// behaviour = {Platform.OS==="ios" ? "padding" : "position"}
+// style = {styes.container}
+// }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,

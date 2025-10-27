@@ -1,8 +1,8 @@
 import { StyleSheet, View } from 'react-native';
 
-import FeedbackForm from './components/FeedbackForm';
 import LittleLemonFooter from './components/LittleLemonFooter';
 import LittleLemonHeader from './components/LittleLemonHeader';
+import LoginScreen from './components/LoginScreen';
 import { black, green } from './components/MenuItems';
 // import MenuItemsSectionList from './components/MenuItemsSectionList';
 // import SectionListAssign from './components/SectionListAssign';ß
@@ -16,7 +16,8 @@ export default function App() {
       <View style={styles.container}>
         <LittleLemonHeader />
         {/* <WelcomeScreen /> */}
-        <FeedbackForm />
+        {/* <FeedbackForm /> */}
+        <LoginScreen />
         {/* <MenuItems /> */}
         {/* <SectionListAssign /> */}
         {/* <SectionListAssignAnswer /> */}

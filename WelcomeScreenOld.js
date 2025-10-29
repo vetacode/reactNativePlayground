@@ -1,9 +1,8 @@
-import * as React from 'react';
-import { ScrollView, Text, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, Text } from 'react-native';
 
 export default function WelcomeScreen() {
   return (
-    <ScrollView indicatorStyle="white" style={styles.container}>
+    <ScrollView indicatorStyle='white' style={styles.container}>
       <Text style={styles.headerText}>Welcome to Little Lemon</Text>
       <Text style={styles.regularText}>
         Little Lemon is a charming neighborhood bistro that serves simple food
